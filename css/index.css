@@ -1,0 +1,526 @@
+﻿video::-webkit-media-controls,
+video::-webkit-media-controls-panel,
+video::-webkit-media-controls-panel-container,
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-volume-slider-container,
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-full-page-media::-webkit-media-controls-panel,
+video::-webkit-media-controls-timeline-container,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-seek-back-button,
+video::-webkit-media-controls-seek-forward-button,
+video::-webkit-media-controls-fullscreen-button,
+video::-webkit-media-controls-rewind-button,
+video::-webkit-media-controls-return-to-realtime-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
+video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none;
+}
+html,body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none; 
+  user-select: none;
+  overflow: hidden;
+}
+
+
+    .shou-1,.shou-2,.shou-3,.shou-4{width:0.42rem;height:0.5rem;}
+    .shou{width:0.42rem;height:0.5rem;position:absolute;bottom:.1rem;left:50%;margin-left:-0.21rem;background:url(http://dfn.weiyuntian.com/img/dianji_01.png) no-repeat;}
+    .shou-1{background:url(http://dfn.weiyuntian.com/img/dianji_01.png) no-repeat;background-size:contain;width:100%;height:100%;}
+    .shou-2{background:url(http://dfn.weiyuntian.com/img/dianji_02.png) no-repeat;background-size:contain;width:100%;height:100%;}
+    .shou-3{background:url(http://dfn.weiyuntian.com/img/dianji_03.png) no-repeat;background-size:contain;width:100%;height:100%;}
+    .shou-4{background:url(http://dfn.weiyuntian.com/img/dianji_04.png) no-repeat;background-size:contain;width:100%;height:100%;}
+
+#ovhi {width:100%;height:100%;position:relative;overflow:hidden;}
+.loading-y{width:1.26rem;height:1.31rem;top:0;right:0;position:fixed; background:url(http://dfn.weiyuntian.com/img/much-1.png) no-repeat; background-size:contain;z-index:7;}
+@-webkit-keyframes much {
+	0%,
+	100%,
+	50% {
+		background:url(http://dfn.weiyuntian.com/img/much-1.png) no-repeat;
+	}
+	25%,
+	75% {
+	background:url(http://dfn.weiyuntian.com/img/much-2.png) no-repeat;
+
+	}
+}
+
+@keyframes much {
+	0%,
+	100%,
+	50% {
+		background:url(http://dfn.weiyuntian.com/img/much-1.png) no-repeat;
+	}
+	25%,
+	75% {
+	background:url(http://dfn.weiyuntian.com/img/much-2.png) no-repeat;
+
+	}
+}
+.much-2 {background:url(http://dfn.weiyuntian.com/img/much-2.png) no-repeat; background-size:contain;}
+.w-tup {background:url(http://dfn.weiyuntian.com/img/w-bu2.png) no-repeat;}
+.much {
+	-webkit-animation-name: much;
+	animation-name: much;
+	animation-iteration-count:2;
+-webkit-animation-iteration-count:2;
+animation-duration:1s;
+-webkit-animation-duration:1s;
+}
+
+.loading-y img{    width: 0.53rem;
+    height: 0.52rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,0);}
+.loading-bj{width:100%;height:100%;position:absolute;top:0rem;left:0;overflow:hidden;}
+.loading-bj-canvas{width:6.4rem;height:6.87rem;position:relative;z-index:1;}
+.loading-bj img {max-width:100%;}
+.paopao{    width: 3.1rem;
+    height: 3.25rem;
+    position: absolute;
+    top: 1.6rem;
+    left: 3.1rem;
+    margin-left: 0rem;
+    z-index: 4;}
+.paopao img{position:absolute;top:0;left:0;}
+#mainvideo {z-index:8;}
+.w-tu {width:100%;height:100%;background:url(http://dfn.weiyuntian.com/img/w-bu2.png) no-repeat; top:0;position:absolute;margin-top:-0.7rem; z-index:3;}
+.box{
+width: 2.1rem;
+    height: 2.5rem;
+    position: absolute;
+    bottom: .5rem;
+    left: 50%;
+    margin-left: -1rem;
+	z-index:4;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center; background:url(http://dfn.weiyuntian.com/img/w-DAPHNE.png) no-repeat;background-size:contain;
+}
+
+/*加载进度样式*/
+.load {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.con-load {
+
+	width: 100%;
+    height: 2.5rem;
+    position: absolute;
+    bottom: .5rem;
+    left: 50%;
+    z-index: 2;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    top: 80%;
+    transform: translate(-50%,-50%);
+}
+.w-toum {width:100%;height:100%;background:url(http://dfn.weiyuntian.com/img/loading-s.png) no-repeat; position:absolute;top:0;left:0;margin-top:-.7rem;opacity:0.15;-webkit-opacity:0.15;}
+@-webkit-keyframes flash-op {
+	0%,
+	100%,
+	50% {
+		opacity: 0;
+	}
+	25%,
+	75% {
+		opacity: 0.15;
+	}
+}
+
+@keyframes flash-op {
+	0%,
+	100%,
+	50% {
+		opacity: 0;
+	}
+	25%,
+	75% {
+		opacity: 0.15;
+	}
+}
+
+.flash-op {
+	   -webkit-animation: flash-op 1s linear infinite;
+    animation: flash-op 1s linear infinite;
+}
+
+
+
+
+.load img {
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 13;
+    -webkit-animation: rotate 1s linear infinite;
+    animation: rotate 1s linear infinite;
+}
+
+.load p {
+     width: 100%;
+    height: 100%;
+    font-size: .35rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.65);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 14;
+    text-align: center;
+}
+
+/*加载进度动画*/
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/*横竖屏代码*/
+/* 样式放在结尾，防止 base64 图片造成拥塞 */
+@-webkit-keyframes rotation {
+    10% {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg)
+    }
+    50%, 60% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg)
+    }
+    90% {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg)
+    }
+    100% {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg)
+    }
+}
+
+@keyframes rotation {
+    10% {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg)
+    }
+    50%, 60% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg)
+    }
+    90% {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg)
+    }
+    100% {
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg)
+    }
+}
+
+#orientLayer {
+    display: none;
+}
+
+@media screen and (min-aspect-ratio: 13/9) {
+    #orientLayer {
+        display: block;
+    }
+
+    body {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.mod-orient-layer {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 9997
+}
+
+.mod-orient-layer__content {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    margin-top: -75px;
+    text-align: center
+}
+
+.mod-orient-layer__icon-orient {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAADaCAMAAABU68ovAAAAXVBMVEUAAAD29vb////x8fH////////x8fH5+fn29vby8vL////5+fn39/f6+vr////x8fH////////+/v7////09PT////x8fH39/f////////////////////x8fH///+WLTLGAAAAHXRSTlMAIpML+gb4ZhHWn1c2gvHBvq1uKJcC6k8b187lQ9yhhboAAAQYSURBVHja7d3blpowFIDhTUIAOchZDkre/zE7ycySrbUUpsRN2/1fzO18KzEqxEVgTiZNfgmmtxRc8iaR8HNe8x4BtjQePKayYCIoyBSgvNNE1AkNSHqZyLqk97EgUCCHBzZ5mkg7ScvIJuIyOyXBRFxgpqWZyGsAZLB1KjsJi8nutHU4JCRbFRH8tmirI9k8Jx2sqNs8K/m0LQkrktO2crgcgXGB4AiTEsB0hJfo9MGgX7CGcYiYwQxmMOOvZwRhBG8tCoMXjBDeXvWCEcHbi14wgCBmMIMZzGAGM5jxETNwzMAxA8cMHDNwzMAxA8cMHDNwzMAxA8cMHDNwzMAxY6E2rUQxnH2tz9cirlJFwFBJedaPnUv0M7++egPDE8iAJcIDmxwH5wwv9vUviw2kLbVO3TJU5uul/EyB0FoLp4x60PdGUd3qPurrWyjGGTc05u+1dcgI7/+tCCPARWGhH7o5Y7RCf+bH9ctXLp6v2BVDxfqz0oPXeSVaNtINo/1SXDv4dck8IIkbhtC2ol+iouEonTBCbYvVMnXOjxww6s/RFrBUpXHh/gw1rHj5d/qhYn9Gpk2FWh6xRBRX5Oj3Znh2Sq49/L6+y8pB26q9GbE2dbA2mVbx6I+7MfBglLCttm73ZQi7AD3iL4HqjFYJHSPRppqaUaJ3ATpGa+ckpGak2hRRMyqjGMkvl+xyFeSMwjAqcsZgGDdyhl0oNTnDN4yenJGZFGxNChP5/Y3efh6SM2rDOJMzboYxkDMqwyjIGcIw6F+io2FU1IxIm1JqRmgXSkvNKNCXeTpGrU0JNSO2c6LIGPgCS8AuDHz9ta0SXWDtxoDRH+MqlbC2Dt2G2JFRadtQZt2qq/orGowdGb2euxYiqWEpVWhTBnszoNAPdStuQwxqf0aocdWKW4Z+DfszIh8pxJqbuCE4YAC+4bm0evtipjpgJHeFnyyt1Ku2xa0bhjxr27p75rECNwyI9ZwvXkHq+7aTaMEV44YYy/spfgjgjNHaWW+GeUhGEX7tLlVinIFDDSgnOwhi1V6bU0b6tVS9eAERe863g4dRrtiHdc6o+nn5vtyVVgR79Cqt4uL6gfHPQyGqtP2vf7HADGbcYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JjhtOM+J/AgT008yDMkN/dPP9hzS8zAMQN3OEYeekp5YU7KOKXwVXqiY+QS7smcinGKABWdiBgpPJTSMHJ4KidhhPBUSMLw4CmPhKHgKUXCkHsygum71ftNSgCX6bsl8FQyfbcL5EdYsDk0R3j7aiA5wpt5AjKg/2gLJEBD/0Hf2OOf/vRrj6z/7GtP4B3nMKyjHA12kIPSjnJs3FEO0TvKkYJHOWCR+rjJH0Vn6fI5PjNbAAAAAElFTkSuQmCC');
+    display: inline-block;
+    width: 67px;
+    height: 109px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -webkit-animation: rotation infinite 1.5s ease-in-out;
+    animation: rotation infinite 1.5s ease-in-out;
+    -webkit-background-size: 67px;
+    background-size: 67px
+}
+.loading-ye {width:100%;height:100%;position:fixed;overflow:hidden;z-index:5; background:#000;}
+
+.mod-orient-layer__desc {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #fff
+}
+
+
+@-webkit-keyframes flash {
+	0%,
+	100%,
+	50% {
+		opacity: 1
+	}
+	25%,
+	75% {
+		opacity: 0
+	}
+}
+
+@keyframes flash {
+	0%,
+	100%,
+	50% {
+		opacity: 1
+	}
+	25%,
+	75% {
+		opacity: 0
+	}
+}
+
+.flash {
+	-webkit-animation-name: flash;
+	animation-name: flash;
+	animation-iteration-count:2;
+-webkit-animation-iteration-count:2;
+animation-duration:1s;
+-webkit-animation-duration:1s;
+}
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+	100% {
+		opacity: 1
+	}
+}
+
+.fadeIn {
+		-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+	animation-iteration-count:1;
+-webkit-animation-iteration-count:1;
+animation-duration:1.5s;
+-webkit-animation-duration:1.5s;
+
+}
+@-webkit-keyframes flash2 {
+	0%,
+	100%,
+	50% {
+		background:url(http://dfn.weiyuntian.com/img/w-bul.png) no-repeat;
+	}
+	25%,
+	75% {
+		background:url(http://dfn.weiyuntian.com/img/w-bu2.png) no-repeat;
+	/*background:url(http://dfn.weiyuntian.com/img/w-bu2.png) no-repeat;*/
+	}
+}
+
+@keyframes flash2 {
+0%,
+	100%,
+	50% {
+		background:url(http://dfn.weiyuntian.com/img/w-bul.png) no-repeat;
+	}
+	25%,
+	75% {
+	   background:url(http://dfn.weiyuntian.com/img/w-bu2.png) no-repeat;
+	/*background:url(http://dfn.weiyuntian.com/img/w-bu2.png) no-repeat;*/
+	}
+}
+.w-tup {background:url(http://dfn.weiyuntian.com/img/w-bu2.png) no-repeat;}
+.flash2 {
+	-webkit-animation-name: flash2;
+	animation-name: flash2;
+	animation-iteration-count:2;
+-webkit-animation-iteration-count:2;
+animation-duration:1s;
+-webkit-animation-duration:1s;
+}
+/*视频页*/
+.video-dome {width:100%;height:100%;position:relative;overflow:hidden; -webkit-user-select: none;user-select: none;z-index:4;background:#000;}
+.pagestart {width:100%;height:100%;position:absolute; background:url(http://dfn.weiyuntian.com/img/shipq-t.png) no-repeat; background-size:100% 100%;}
+.videobox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+    z-index: 4;
+}
+
+#mainvideo {width: 1%;display: blcok;}
+
+/**/
+.w-three {width:100%;height:100%;position:relative;z-index:3;overflow:hidden;}
+.w-three .w-fiv {width:100%;height:100%;position:relative; background:url(http://dfn.weiyuntian.com/img/bjmen.png) no-repeat ; background-size:100% 100%;}
+.men-dang{width:100%;height:100%;background:url(http://dfn.weiyuntian.com/img/men-dang.png) no-repeat; background-size:100% 100%; position:absolute;bottom:0rem;left:0;z-index:2;}
+	
+
+
+.tiao-five {width:100%;height:100%;background:url(http://dfn.weiyuntian.com/img/meng.png) no-repeat ; background-size:100% 100%;  position:absolute;bottom:0rem;left:0;z-index:1;transition:1s;}
+#tiao-five {  
+width: 4.8rem;
+    height: 4.7rem;z-index:3;
+    position: absolute;
+    bottom: 0.74rem;
+    left: 0.73rem;
+    }
+.bt{width:4.65rem;height:4.1rem;background:url(http://dfn.weiyuntian.com/img/btt.jpg) no-repeat;background-size;100% 100%;position:absolute;bottom:0.74rem;left:0.85rem;}
+
+
+/**/
+#huxi {width:100%;height:100%;top:.5rem;position:absolute;}
+.huxi {background:url(http://dfn.weiyuntian.com/img/w-bjtu3.png) no-repeat; }
+@-webkit-keyframes flash3 {
+	0%,
+	100%,
+	50% {
+		background:url(http://dfn.weiyuntian.com/img/w-bjtu2.jpg) no-repeat;
+	}
+	25%,
+	75% {
+		background:url(http://dfn.weiyuntian.com/img/w-bjtu.png) no-repeat;
+	/*background:url(http://dfn.weiyuntian.com/img/w-bu2.png) no-repeat;*/
+	}
+}
+
+@keyframes flash3 {
+0%,
+	100%,
+	50% {
+		background:url(http://dfn.weiyuntian.com/img/w-bjtu2.jpg) no-repeat;
+	}
+	25%,
+	75% {
+	background:url(http://dfn.weiyuntian.com/img/w-bjtu.png) no-repeat;
+	/*background:url(http://dfn.weiyuntian.com/img/w-bu2.png) no-repeat;*/
+	}
+}
+.flash3 {
+	-webkit-animation-name: flash3;
+	animation-name: flash3;
+	animation-iteration-count:2;
+-webkit-animation-iteration-count:2;
+animation-duration:1s;
+-webkit-animation-duration:1s;
+}
+/*呼吸*/
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1)
+	}
+	50% {
+		-webkit-transform: scale3d(1.15, 1.15, 1.15);
+		transform: scale3d(1.15, 1.15, 1.15);
+	}
+	100% {
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1)
+	}
+}
+
+@keyframes pulse {
+	0% {
+		-webkit-transform: scale3d(1, 1, 1);
+		-ms-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1)
+	}
+	50% {
+		-webkit-transform: scale3d(1.15, 1.15, 1.15);
+		-ms-transform: scale3d(1.15, 1.15, 1.15);
+		transform: scale3d(1.15, 1.15, 1.15);
+	}
+	100% {
+		-webkit-transform: scale3d(1, 1, 1);
+		-ms-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1)
+	}
+}
+
+.pulse {
+	
+	animation:pulse 1s 2s linear  infinite;
+-webkit-animation:pulse 1s 2s linear  infinite;
+}
+
+@media only screen and (min-width:360px ) {
+
+	}
+	

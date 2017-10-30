@@ -1,0 +1,208 @@
+﻿@charset "utf-8";
+
+* { padding: 0; margin: 0;   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,  
+form,fieldset,input,textarea,p,blockquote,th,td {
+	padding: 0;
+	margin: 0;
+	border-collapse: 0;
+	
+} 
+ 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0 none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+ 
+fieldset,img {  
+border: 0;  
+vertical-align:middle;
+}  
+ 
+ol,ul {  
+list-style: none;
+margin:0px;
+padding:0px;
+}  
+caption,th {  
+text-align: left;  
+}  
+h1,h2,h3,h4,h5,h6 {  
+font-size: 100%;  
+font-weight:normal;
+}
+a{ color:#999999;text-decoration:none; border:none;}
+a:hover{ cursor:pointer;outline:none}
+body{ color:#999999;  background:#000;position:relative;}
+input,button,select,textarea{outline:none;background:none;border:none;}  
+
+textarea{resize:none} 
+.clearfix:after {
+clear: both;
+content: '.';
+display: block;
+height: 0px;
+overflow: hidden;
+visibility: hidden;
+}
+
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body, h1, p, table, tr, td {
+    margin: 0;
+    padding: 0;
+}
+html{font-size:75%;}
+header {padding: 2.5rem 0;}
+
+body,html {position:relative;max-width:100%;-webkit-user-select:none;-moz-user-select:none;/*禁止双击页面选中文本*/
+text-align: center;height: 100%; font-size:1rem;/* 10/16x100%= 62.5%  默认1em=16px 这个是将转换为    em=rem  but:rem不兼容ie8 如需 直接在加一个 px即可 ^ ^ 对了  浏览器不支持12px以下的字体   所以 最小   1rem=12px */
+}
+
+
+.heb{width:100%;height:100%;position:relative;float:left; background:#000;}
+.heb .disn {width:100%;height:40px;font-size:.8rem;color:#fff;position:absolute;top:50%;margin-top:-.4rem;left:0;}
+.ovhu {width:100%;height:100%;overflow:hidden;}
+.phone {width:12rem;height:12rem;position:relative;top:0;left:-2.5rem;opacity:0; background:url(../img/dad.jpg) no-repeat center center; overflow:hidden;}
+.sever {  animation: rotate-back-2 500ms linear ;}
+
+
+
+/*rotate-back*/
+@keyframes "rotate-back-2" {
+0% {
+ 	  -o-transform: rotate(-360deg)scale(1);
+   transform: rotate(-360deg)scale(1);
+  opacity:1;
+
+ }
+  50% {
+ 	  -o-transform: rotate(-180deg)scale(1.5);
+   transform: rotate(-180deg)scale(1.5);
+   opacity:1;
+
+ }
+ 90% {
+ -o-transform: rotate(0deg)scale(4);
+   transform: rotate(0deg)scale(4);
+    opacity:0.3;
+ }
+ 100%{
+	  -o-transform: rotate(0deg)scale(4);
+   transform: rotate(0deg)scale(4);
+ opacity:0;
+ }
+}
+
+@-moz-keyframes rotate-back-2 {
+0% {
+ 	  -o-transform: rotate(-360deg)scale(1);
+   transform: rotate(-360deg)scale(1);
+  opacity:1;
+
+ }
+  50% {
+ 	  -o-transform: rotate(-180deg)scale(1.5);
+   transform: rotate(-180deg)scale(1.5);
+   opacity:1;
+
+ }
+ 90% {
+ -o-transform: rotate(0deg)scale(4);
+   transform: rotate(0deg)scale(4);
+    opacity:0.3;
+ }
+ 100%{
+	  -o-transform: rotate(0deg)scale(4);
+   transform: rotate(0deg)scale(4);
+ opacity:0;
+ }
+}
+
+@-webkit-keyframes "rotate-back-2" {
+ 0% {
+ 	  -o-transform: rotate(-360deg)scale(1);
+   transform: rotate(-360deg)scale(1);
+  opacity:1;
+
+ }
+  50% {
+ 	  -o-transform: rotate(-180deg)scale(1.5);
+   transform: rotate(-180deg)scale(1.5);
+   opacity:1;
+
+ }
+ 90% {
+ -o-transform: rotate(0deg)scale(4);
+   transform: rotate(0deg)scale(4);
+    opacity:0.3;
+ }
+ 100%{
+	  -o-transform: rotate(0deg)scale(4);
+   transform: rotate(0deg)scale(4);
+ opacity:0;
+ }
+}
+
+@-ms-keyframes "rotate-back-2" {
+ 0% {
+ 	  -o-transform: rotate(-360deg)scale(1);
+   transform: rotate(-360deg)scale(1);
+  opacity:1;
+
+ }
+  50% {
+ 	  -o-transform: rotate(-180deg)scale(1.5);
+   transform: rotate(-180deg)scale(1.5);
+   opacity:1;
+
+ }
+ 90% {
+ -o-transform: rotate(0deg)scale(4);
+   transform: rotate(0deg)scale(4);
+    opacity:0.3;
+ }
+ 100%{
+	  -o-transform: rotate(0deg)scale(4);
+   transform: rotate(0deg)scale(4);
+ opacity:0;
+ }
+}
+
+@-o-keyframes "rotate-back-2" {
+ 0% {
+ 	  -o-transform: rotate(-360deg)scale(1);
+   transform: rotate(-360deg)scale(1);
+  opacity:1;
+
+ }
+  50% {
+ 	  -o-transform: rotate(-180deg)scale(1.5);
+   transform: rotate(-180deg)scale(1.5);
+   opacity:1;
+
+ }
+ 90% {
+ -o-transform: rotate(0deg)scale(4);
+   transform: rotate(0deg)scale(4);
+    opacity:0.3;
+ }
+ 100%{
+	  -o-transform: rotate(0deg)scale(4);
+   transform: rotate(0deg)scale(4);
+ opacity:0;
+ }
+}

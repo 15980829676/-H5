@@ -1,0 +1,661 @@
+﻿<HEAD>
+    <TITLE>和盛一伦的粉色邂逅</TITLE>
+    <META name=keywords content=达芙妮>
+    <META name=description content=达芙妮>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <META name=apple-mobile-web-app-capable content=yes>
+    <META name=apple-mobile-web-app-status-bar-style content=black>
+    <META content=text/html;charset=utf-8 http-equiv=Content-Type>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!-- 默认使用最新浏览器 -->
+    <meta name="robots" content="index,follow"> <!-- 搜索引擎抓取 -->
+    <META content=IE=edge http-equiv=x-ua-compatible>
+    <META content=on http-equiv=x-dns-prefetch-control>
+    <META content=no-cache http-equiv=Pragma>
+    <META content=0 http-equiv=Expires>
+    <meta content="telephone=no" name="format-detection">
+    <meta name="viewport" content="width=640">
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-capable" content="yes"><!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-touch-fullscreen" content="yes">
+	<link rel=”dns-prefetch” href=”//weibo.com”/>
+	<link rel=”prefetch” href=”image.png”/>
+	<link rel=”prerender” href=”http://css-tricks.com”/>
+	<link rel=”preload” href=”image.png”/>
+	<link rel=”preload” href=”http://dfn.weiyuntian.com/img/loading-s.png”/>
+	<link rel=”preload” href=”http://dfn.weiyuntian.com/img/w-bjtu3.png”/>
+	<link rel=”preconnect” href=”http://css-tricks.com”/>
+    <!--<meta name="screen-orientation" content="portrait"><!-- uc强制竖屏 -->
+    <!--<meta name="full-screen" content="yes">--><!-- UC强制全屏 -->
+   <!--<meta name="browsermode" content="application">--><!-- UC应用模式 -->
+   <!--<meta name="x5-orientation" content="portrait">--><!-- QQ强制竖屏 -->
+  <!--<meta name="x5-fullscreen" content="true">--><!-- QQ强制全屏 -->
+  <!--<meta name="x5-page-mode" content="app">--><!-- QQ应用模式 -->
+    <meta name="format-detection" content="telephone=no, address=no, email=no"><!-- 忽略页面中的数字识别\email识别\地址识别 -->
+    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/bigvideo.css">
+    <link rel="stylesheet" href="css/index.css?va1">
+    <!--适配js代码-->
+    <script src="js/mobile-util.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+	<!--微信sdk接口-->
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	
+    <!--获取资源加载进度获取插件-->
+    <script src="js/pace.js"></script> 
+    <script src="js/iphone-inline-video.min.js"></script> 
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if(!clientWidth) return;
+                    if(clientWidth >= 640) {
+                        docEl.style.fontSize = '100px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+
+            if(!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script type="text/javascript" src="hotspot/popwin.js"></script>
+
+    <STYLE>
+		@-ms-viewport { width:device-width; }
+		@media only screen and (min-device-width:800px) { html { overflow:hidden; } }
+		html { height:100%; }
+		body { height:100%; overflow:hidden; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#FFFFFF;  }
+	</STYLE>
+
+    <style>
+        .father{
+            position:fixed;
+            width:100%;
+            height:100%;
+            top;0;
+            left:0;
+            filter:alpha(opacity=30);
+            -moz-opacity:0.3;
+            opacity:0.3;
+            -khtml-opacity: 0.3;
+        }
+        .son{
+            position: absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            width:50%;
+            height:50%;
+            margin:auto;
+
+            margin-top:-33px;
+        }
+    </style>
+
+    <STYLE type=text/css>
+        body{ text-align:center; width:100%;}
+        /*for mobile*/
+        .scroll-wrapper {
+            display: inline-block;
+            -webkit-overflow-scrolling: touch;
+            overflow-y: scroll;
+        }
+        #Layer2 {
+            position:absolute;
+            z-index:1;
+            margin:50px;
+            text-align:center;
+        }
+
+        /*for pc*/
+        .scroll-wrapper_pc {
+            display: inline-block;
+        }
+        #Layer4 {
+            position:absolute;
+            width:100%;
+            height:100%;
+            z-index:999999;
+        }
+        #Layer5 {
+            position:absolute;
+            height:80px;
+            z-index:9999;
+            right:20px;
+            cursor:pointer;
+            text-align:center;
+        }
+
+    </STYLE>
+
+<!--全景视频播放包含开始-->
+    <link href="vr_video/HTML5Pano-js.min.css" rel="stylesheet"> 
+    <script src="vr_video/video.min.js" ></script>
+    <script src="vr_video/three.js" ></script>
+    <!-- Common -->
+    <link href="vr_video/HTML5Pano-panorama.css" rel="stylesheet">
+
+    <style>
+        .player_wrapper{
+            position: relative;
+            max-width: 100%;
+            width: 100%;
+            max-height: 100%;
+            position:absolute;
+
+        }
+        body.vjs-full-window .player_wrapper{
+            position: static;
+        }
+        .player_container{
+            padding-top: 56.25%;
+        }
+        #html5pano-vr-player{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    </style>
+    <script language="JavaScript" type="text/javascript">
+        var is_config_ok = false;//是否加载了配置
+
+        function create_html5pano(url,w,h){//视频地址,宽度,高度
+            is_config_ok = true;//是否加载了配置
+
+            if (url != ""){
+                //给视频源加url
+                var ele_HTML5Pano_VR_VIDEO = document.getElementById("HTML5Pano_VR_VIDEO");
+                ele_HTML5Pano_VR_VIDEO.setAttribute("src",url);
+
+                //给video标签加url
+                var ele_video_api = document.getElementById("html5pano-vr-player_html5_api");
+                if(ele_video_api!=null){
+                    ele_video_api.setAttribute("src",url);
+                }
+
+                //设置video尺寸
+                var ele_HTML5Pano_VR = document.getElementById("HTML5Pano_VR");
+                ele_HTML5Pano_VR.style.width = w;
+                ele_HTML5Pano_VR.style.height = h;
+
+                if(w!="100%" && h!="100%"){//如果不是全屏，设置剧中显示
+
+                    if(w.indexOf("%") != -1){
+                        var str_w = w.replace("%","");
+                        str_w  =str_w / 100;
+                        w = document.body.clientWidth * str_w;
+                    }
+
+                    if(h.indexOf("%") != -1){
+                        var str_h = h.replace("%","");
+                        str_h  =str_h / 100;
+                        h = document.body.clientHeight * str_h;
+                    }
+
+                    ele_HTML5Pano_VR.style.top = (document.body.clientHeight / 2) - (h / 2);
+                    ele_HTML5Pano_VR.style.left = (document.body.clientWidth / 2) - (w / 2);
+                }else{
+                    ele_HTML5Pano_VR.style.top = 0;
+                    ele_HTML5Pano_VR.style.left = 0;
+                }
+
+                ele_HTML5Pano_VR.style.display = "";
+
+                //清除多余的VR按钮
+                var btn_vr = document.getElementsByTagName("button");
+                var btn_vr_len = btn_vr.length;
+
+                for(var k=0;k<btn_vr_len;k++){
+                    var vr_code = btn_vr[k].outerHTML;
+                    if(vr_code.indexOf("<span class=\"vjs-control-text\">VR</span>") != -1){
+                        btn_vr[k].style.display = "none";
+                    }
+                }
+
+
+
+
+                return false;
+            }else{
+
+                //清除多余的canvas
+                var this_canvas = document.getElementsByTagName("canvas");
+                var this_canvas_len = this_canvas.length;
+
+                for(var k=0;k<this_canvas_len;k++){
+                    var this_class = this_canvas[k].outerHTML;
+                    if(this_class.indexOf("vjs-video-canvas") != -1){
+                        this_canvas[k].remove();
+                    }
+
+                }
+
+                var ele_HTML5Pano_VR = document.getElementById("HTML5Pano_VR");
+                ele_HTML5Pano_VR.style.display = "none";
+
+                //获取视频并暂停
+                player.pause();
+
+                return false;
+            }
+        }
+    </script>
+<!--全景播放包含结束-->
+</head>
+<BODY>
+<!--视频页-->
+
+ <div id="videobox" class="videobox" style="overflow:hidden;">
+<video id="mainvideo" x5-video-player-fullscreen="true" x5-video-player-type="h5" x-webkit-airplay="true" playsinline="true" preload="true"  webkit-playsinline="true" 
+  src="http://dfn.weiyuntian.com/mp4/shiop.mp4" style="object-fit: fill;"></video>
+<!-- <audio id="mainvideo2" style="display:none" src="http://dfn.weiyuntian.com/mp4/shiop_mc.mp3?11"  preload ></audio>-->
+  </div>
+<div id="ovhi">
+<!--音乐按钮---->
+<div id="much-none" class="loading-y">
+    </div>
+
+<!--加载进度显示-->
+<div class="load" >
+   <div class="w-toum" style="opacity:0.15;"></div>
+    <div class="con-load">
+        <p style="font-size:.35rem;"></p>
+    </div>
+</div>
+<audio id="xiuxiu-1" style="display:none" src="http://dfn.weiyuntian.com/img/1.mp3?d1"  preload ></audio><!--电流-->
+<audio id="xiuxiu" style="display:none" src="http://dfn.weiyuntian.com/img/dabei.mp3?d2"  preload loop="loop"></audio>
+<!--大背景-->
+
+<style>
+    .loading1{width:100%;height:100%;background:#000;/*margin-top: -0.7rem;*/}
+    .loading1 img{width:100%;height:100%;}
+    .lad-img1,.lad-img2,.lad-img3,.lad-img4,.lad-img5,.lad-img6,.lad-img7,.lad-img8,.lad-img9{width:6.4rem;height:11.36rem;display:none;position:absolute;left:0;top:-0.7rem;}
+    .lad-img1{background:url("http://dfn.weiyuntian.com/img/1.png") no-repeat;background-size:contain;}
+    .lad-img2{background:url("http://dfn.weiyuntian.com/img/2.png") no-repeat;background-size:contain;}
+    .lad-img3{background:url("http://dfn.weiyuntian.com/img/3.png") no-repeat;background-size:contain;}
+    .lad-img4{background:url("http://dfn.weiyuntian.com/img/4.png") no-repeat;background-size:contain;}
+    .lad-img5{background:url("http://dfn.weiyuntian.com/img/5.png") no-repeat;background-size:contain;}
+    .lad-img6{background:url("http://dfn.weiyuntian.com/img/6.png") no-repeat;background-size:contain;}
+    .lad-img7{background:url("http://dfn.weiyuntian.com/img/7.png") no-repeat;background-size:contain;}
+    .lad-img8{background:url("http://dfn.weiyuntian.com/img/8.png") no-repeat;background-size:contain;}
+    .lad-img9{background:url("http://dfn.weiyuntian.com/img/9.png") no-repeat;background-size:contain;}
+    .lad-img10{background:url("http://dfn.weiyuntian.com/img/10.png") no-repeat;background-size:contain;}
+</style>
+<!--lading-->
+<div class="loading1" id="loading1" style="opacity:0;">
+    <div class="lad-img1"></div>
+    <div class="lad-img2"></div>
+    <div class="lad-img3"></div>
+    <div class="lad-img4"></div>
+    <div class="lad-img5"></div>
+    <div class="lad-img10"></div>
+    <div class="lad-img6"></div>
+    <div class="lad-img7"></div>
+    <div class="lad-img8"></div>
+    <div class="lad-img9"></div>
+</div>
+<!--loading页-->
+<div id="loadin-box"  class="loading-ye" style="opacity:0">
+
+    <!--背景-->
+    <div class="loading-bj" id="loadingBJ">
+        <div class="paopao" id="paopao">
+            <img src="img/pao-1.png?v1">
+            <img src="img/pao-2.png?v2">
+            <img src="img/pao-3.png?v3">
+            <img src="img/pao-4.png?v4">
+            <img src="img/pao-5.png?v5">
+            <img src="img/w-pao6.png?v6">
+        </div>
+        <div class="w-tu">
+        </div>
+       <div id="huxi" class=""></div>
+    </div>
+
+
+    <div id="w-box" class="box">
+	
+
+	</div>
+		<div class="shou" id="shou">
+    <div class="shou-1" style="display:none"></div>
+    <div class="shou-2" style="display:none"></div>
+    <div class="shou-3" style="display:none"></div>
+    <div class="shou-4" style="display:none"></div>
+</div>
+    <!--按钮-->
+
+</div>
+
+
+<!--第三屏-->
+<style>
+    .wz{    width: 4.76rem;
+        height: 1.46rem;
+        background: url(http://dfn.weiyuntian.com/img/yinbao_03.png) no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 2.15rem;
+        transition: 0.5s;
+        /*right:0.4rem;*/
+        right: -5rem;z-index:3;}
+    .fs{    width: 3.91rem;
+        height: 1.24rem;
+        background: url(http://dfn.weiyuntian.com/img/fs_03.png) no-repeat;
+        background-size: contain;
+        top: 3.3rem;
+        position: absolute;
+        z-index: 3;
+        transition: 0.5s;
+        /*left:0.34rem*/
+        left: -4rem;z-index:3;}
+    .yikan{width:5.82rem;height:3.67rem;background:url("http://dfn.weiyuntian.com/img/cm2.png") no-repeat;background-size:contain;display:none;position:absolute;top:.8rem;left:-.5rem;transition:1s;}
+    .w-three{opacity:0;}
+</style>
+<div class="w-three">
+    <div class="bt"></div>
+    <div class="tiao-five"></div>
+    <div class="w-fiv"></div>
+	<div class="men-dang"></div>
+    <!--正常定点0.4rem，右边飞入定点-5rem-->
+    <div class="wz"></div>
+    <!--正常定点left：0.34rem，左边飞入定点-4rem-->
+    <div class="fs"></div>
+    <div id="tiao-five">
+        <div class="yikan"></div>
+    </div>
+</div>
+
+<!--旋转提示-->    <!-- 选择禁止横屏或竖屏显示-->
+<div id="orientLayer" class="mod-orient-layer">
+    <div class="mod-orient-layer__content">
+        <i class="icon mod-orient-layer__icon-orient"></i>
+        <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
+    </div>
+</div>
+
+<div class="" id="qp" style="display:none">
+
+
+    <!--全景视频播放开始-->
+    <div id="HTML5Pano_VR" class="player_wrapper" style=" position:absolute; z-index:10000; display:none;">
+        <video id="html5pano-vr-player" class="video-js vjs-default-skin vjs-big-play-centered" crossorigin="anonymous" >
+            <source id="HTML5Pano_VR_VIDEO" src="" type='video/mp4'>
+        </video>
+    </div>
+    <!--全景视频播放结束-->
+
+    <SCRIPT src="tour.js"></SCRIPT>
+
+
+    <DIV style="WIDTH: 100%; HEIGHT: 100%" id=pano><NOSCRIPT></NOSCRIPT>
+        <SCRIPT>
+            embedpano({wmode:"transparent",swf:"tour.swf", xml:"tour.xml", target:"pano", html5:"auto", mobilescale:0.5, passQueryParameters:true});
+        </SCRIPT>
+    </DIV>
+    <SCRIPT type=text/javascript>
+    function tel(code){
+        location.href=code;
+    }
+    </SCRIPT>
+
+    <SCRIPT type=text/javascript>
+        function get_pano_tj(){
+            var s_id =  document.getElementById("pano_tj");//数量标签
+            return s_id.innerHTML;
+        }
+        function disp_iframe(url){//显示与隐藏iframe
+            var doc_height = document.body.clientHeight;//网页可见区域高度
+            var doc_width = document.body.clientWidth;//网页可见区域宽度
+
+            var h = parseInt(doc_height)*0.76;
+            var w = parseInt(doc_width)*0.8;
+
+            popWin.showWin(w,h,"通用的iframe弹层插件",url);
+        }
+
+        function disp_iframe_pc(btn_close,w,h,disp,url,title){//显示与隐藏iframe
+            //设置垂直居中显示
+            var div_ifm = document.getElementById("scroll-wrapper_pc");
+            div_ifm.style.width = doc_width + "px";//宽度
+            div_ifm.style.height = doc_height + "px";//高度
+        }
+        function disp_iframe_pc_bak(btn_close,w,h,disp,url,title){//显示与隐藏iframe
+            var doc_height = document.body.clientHeight;//网页可见区域高度
+            var doc_width = document.body.clientWidth;//网页可见区域宽度
+
+            //如果高度是百分比
+            if(h.indexOf("%")>=0){
+                h = h.replace("%","");
+                h = (h * parseInt(doc_height) / 100);
+            }
+
+            //如果宽度是百分比
+            if(w.indexOf("%")>=0){
+                w = w.replace("%","");
+                w = (w * parseInt(doc_width) / 100);
+            }
+
+            h = parseInt(h);//取整后的高度
+            w = parseInt(w);//取整后的宽度
+
+            //iframe
+            var ifm = document.getElementById("main_iframe_pc");
+            var div_pano = document.getElementById("pano");
+            ifm.src = url;
+            ifm.style.width = w + "px";//宽度
+            ifm.style.height = h + "px";//高度
+
+            //包含iframe的td
+            var td_ifm = document.getElementById("td_for_ifm");
+            td_ifm.style.width = w + "px";//宽度
+            td_ifm.style.height = h + "px";//高度
+
+            //设置【关闭】按钮
+            var td_cls = document.getElementById("td_close");
+            if(btn_close=="True"){//如果要添加【关闭按钮】
+                td_cls.style.cssText = "width:60px;";
+            }else{
+                var is_html5 = checkVideo();//是否支持html5
+                if(is_html5==true){//如果支持
+                    td_cls.style.cssText = "width:60px;display:none;";
+                }else{
+                    td_cls.style.cssText = "width:60px;";
+                }
+            }
+
+            //设置内容
+            var div_cont = document.getElementById("Layer4");
+            div_cont.style.width = doc_width + "px";//宽度
+            div_cont.style.height = doc_height + "px";//高度
+            if(disp=="Y"){
+                div_cont.style.display="";
+            }else{
+                div_cont.style.display="none";
+                stop_sound();//关闭热点音效，并开启背景音乐
+            }
+
+            //设置垂直居中显示
+            var div_ifm = document.getElementById("scroll-wrapper_pc");
+            div_ifm.style.width = doc_width + "px";//宽度
+            div_ifm.style.height = doc_height + "px";//高度
+
+            var this_height_value = parseInt(h);//内容高度值
+            var doc_height_value = parseInt(doc_height);//文档高度值
+
+            if(doc_height_value>this_height_value){
+                var mar_top = (doc_height_value-this_height_value)/2;
+                div_ifm.style.marginTop = mar_top + "px";
+            }
+        }
+
+        //关闭热点音效
+        function stop_sound(){
+            var obj_sound = document.getElementById("krpanoSWFObject");
+
+            if (obj_sound && obj_sound.get){
+                obj_sound.call("act_stop_all_scene_sound(N);");
+            }
+        }
+
+        //检测浏览器是否支持HTML5 video
+        function checkVideo(){
+            if (!!document.createElement('video').canPlayType) {
+                var vidTest = document.createElement("video");
+                oggTest = vidTest.canPlayType('video/ogg; codecs="theora, vorbis"');
+                if (!oggTest) {
+                    h264Test = vidTest.canPlayType('video/mp4; codecs="avc1.42E01E, mp4a.40.2"');
+                    if (!h264Test) {
+                        //document.getElementById("checkVideoResult").innerHTML = "此浏览器不支持HTML5视频"
+                        return false;
+                    } else {
+                        if (h264Test == "probably") {
+                            //document.getElementById("checkVideoResult").innerHTML = "此浏览器完全支持HTML5!";
+                            return true;
+                        } else {
+                            //document.getElementById("checkVideoResult").innerHTML = "此浏览器支持部分HTML5属性!";
+                            return false;
+                        }
+                    }
+                } else {
+                    if (oggTest == "probably") {
+                        //document.getElementById("checkVideoResult").innerHTML = "此浏览器完全支持HTML5!";
+                        return true;
+                    } else {
+                        //document.getElementById("checkVideoResult").innerHTML = "此浏览器支持部分HTML5属性!";
+                        return false;
+                    }
+                }
+            } else {
+                //document.getElementById("checkVideoResult").innerHTML = "此浏览器完全不支持HTML5";
+                return false;
+            }
+        }
+    </SCRIPT>
+</div>
+
+
+
+<script>
+ function switch_play(inde_muc){
+	if(inde_muc==='play'){
+		 document.getElementById("xiuxiu").pause(); //暂停
+				$('#much-none').css("background","url(http://dfn.weiyuntian.com/img/much-1.png) no-repeat");
+			
+				
+			}else{
+				
+			document.getElementById("xiuxiu").play();//播放
+				$('#much-none').css("background","url(http://dfn.weiyuntian.com/img/much-2.png) no-repeat");
+			
+			}
+    }
+
+
+    //背景
+{
+        var shouD=parseInt($('#shou').find('div').length);
+        var shouLent=0;
+        var set=setInterval(function(){
+            if(shouD==shouLent){
+                $('#shou').find('div').attr('style','display:none');
+                $('#shou').find('div').eq(shouLent).attr('style','display:block');
+                shouLent=0;
+            }else{
+                $('#shou').find('div').attr('style','display:none');
+                $('#shou').find('div').eq(shouLent).attr('style','display:block');
+                shouLent+=1;
+            }
+        },300);
+ }
+    //泡泡
+    var height_p=document.documentElement.clientHeight+'px';
+    $('.loading-ye').css('height',height_p);
+    var video = document.getElementById('mainvideo');
+	enableInlineVideo(video);
+   video.addEventListener('touchstart', function () {
+	video.play();
+});
+    var videobox = document.getElementById('videobox');
+    //播放时改变外层包裹的宽度，使video宽度增加，
+    //相应高度也增加了,播放器控件被挤下去，配合overflow：hidden
+    //控件看不见也触摸不到了
+
+    document.addEventListener("WeixinJSBridgeReady", function (){
+        video.play();
+        video.pause();
+    }, false)
+   /* video.addEventListener('timeupdate',function (){
+        //当视频的currentTime大于0.1时表示黑屏时间已过，已有视频画面，可以移除浮层（.pagestart的div元素）
+        if ( !video.isPlayed && this.currentTime>0.1 ){
+            $('.pagestart').fadeOut(500);
+            video.isPlayed = !0;
+        }
+    })*/
+    var setVideoStyle = function (){
+        videobox.style.width = '100%';
+        videobox.style.left = '0%';
+		video.style.width='100%';
+	video.style.height='100%';
+    }
+    video.addEventListener("ended", function()
+    {
+        $('.videobox').fadeOut(1200);
+		$('#much-none').fadeIn();
+        $('#mainvideo').fadeOut(1200);
+        $('.w-three').attr('style','opacity:1');
+        setTimeout(function(){
+            $('.wz').css('right','0.4rem');
+            $('.fs').css('left','0.34rem');
+		
+        },1000);
+		 setTimeout(function(){
+           
+			$('.yikan').fadeIn(1000);
+        },1500);
+		
+    });
+ $('#tiao-five').on('click',function(){
+
+        $('.yikan').fadeOut(500);
+        setTimeout(function(){
+            $('.tiao-five').attr('style','left:-3.93rem');
+        },500);
+
+
+        setTimeout(function(){
+
+            $('.w-three').fadeOut();
+            $('#qp').attr('style','');
+        },1450);
+    });
+	var xiuxiu=document.getElementById("xiuxiu");
+    $('#loadin-box').click(function(){
+	    if(xiuxiu.paused){
+		xiuxiu.play();//播放
+		$('#much-none').css("background","url(http://dfn.weiyuntian.com/img/much-2.png) no-repeat");
+		}
+
+	   setVideoStyle();
+        $('.loading-ye').css('display','none');
+        $('#much-none').fadeOut();
+
+		document.getElementById('mainvideo').play();
+		//document.getElementById('mainvideo2').play();
+        
+       
+
+    });
+   
+
+</script>
+</div>
+</BODY>
+<script src="js/index.js"></script>

@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+	 <meta name="viewport" content="width=640">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!-- 默认使用最新浏览器 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp"><!-- 不被网页(加速)转码 -->
+    <meta name="robots" content="index,follow"> <!-- 搜索引擎抓取 -->
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-capable" content="yes"><!-- 删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><!-- 设置苹果工具栏颜色 -->
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+    <meta name="screen-orientation" content="portrait"><!-- uc强制竖屏 -->
+    <meta name="full-screen" content="yes"><!-- UC强制全屏 -->
+    <meta name="browsermode" content="application"><!-- UC应用模式 -->
+    <meta name="x5-orientation" content="portrait"><!-- QQ强制竖屏 -->
+    <meta name="x5-fullscreen" content="true"><!-- QQ强制全屏 -->
+    <meta name="x5-page-mode" content="app"><!-- QQ应用模式 -->
+    <meta name="format-detection" content="telephone=no, address=no, email=no"><!-- 忽略页面中的数字识别\email识别\地址识别 -->
+    <link rel="stylesheet" href="css/comment.css">
+	 <link rel="stylesheet" href="css/bigvideo.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!--适配js代码-->
+    <script src="js/mobile-util.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <!--获取资源加载进度获取插件-->
+    <script src="js/pace.js"></script>
+    <title>手机页面模板</title>
+	<script>
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+					recalc = function() {
+						var clientWidth = docEl.clientWidth;
+						if(!clientWidth) return;
+						if(clientWidth >= 640) {
+							docEl.style.fontSize = '100px';
+						} else {
+							docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+						}
+					};
+
+				if(!doc.addEventListener) return;
+				win.addEventListener(resizeEvt, recalc, false);
+				doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		</script>
+</head>
+<body>
+<!--loading页-->
+<div class="loading-ye">
+ <!--音乐按钮-->
+  <div class="loading-y"></div>
+<!--背景-->
+   <div class="loading-bj" id="loadingBJ">
+            <div class="paopao" id="paopao">
+                <img src="http://dfn.weiyuntian.com/img/w-pao1.png" style="display:none">
+                <img src="http://dfn.weiyuntian.com/img/w-pao2.png" style="display:none">
+                <img src="http://dfn.weiyuntian.com/img/w-pao3.png" style="display:none">
+                <img src="http://dfn.weiyuntian.com/img/w-pao4.png" style="display:none">
+                <img src="http://dfn.weiyuntian.com/img/w-pao5.png" style="display:none">
+                <img src="http://dfn.weiyuntian.com/img/w-pao6.png" style="display:none">
+            </div>
+			<div class="w-tu">
+			<div id="huxi" class=""></div>
+			</div>
+          
+        </div>
+
+
+<!--按钮-->
+<div id="w-box" class="box"></div>
+<!--加载进度显示-->
+<div class="load" >
+    <div class="con-load">
+       <div class="w-toum" style="width:100%;height:100%;background:url(http://dfn.weiyuntian.com/img/w-toum.png);"></div>
+        <p></p>
+    </div>
+</div>
+</div>
+<!--视频页-->
+
+ <div class="videobox">
+ <div class="pagestart" style="width:100%;height:100%;position:absolute; background:red;"></div>
+    <video id="mainvideo" x5-video-player-fullscreen="true" x5-video-player-type="h5" x-webkit-airplay="allow" playsinline webkit-playsinline src="http://47.92.94.131/fff/phone/mp4/shiop.mp4" style="object-fit: fill;"></video>
+ </div> 
+
+ <!--第三屏-->
+ <div class="w-three" style="display:none;">
+   <div class="w-fiv"></div>
+   <div id="tiao-five"></div>
+ </div>
+ <!--门旋转过度-->
+<div class="Door" style="display:none">
+     <div class="Door-phone xuanzhuan"></div>
+</div>
+<!--旋转提示-->    <!-- 选择禁止横屏或竖屏显示-->
+<div id="orientLayer" class="mod-orient-layer">
+    <div class="mod-orient-layer__content">
+        <i class="icon mod-orient-layer__icon-orient"></i>
+        <div class="mod-orient-layer__desc">为了更好的体验，请使用竖屏浏览</div>
+    </div>
+</div>
+<script>
+  //背景
+
+    //泡泡
+   var height_p=document.documentElement.clientHeight+'px';
+   $('.loading-ye').css('height',height_p);
+  var video = document.querySelector('#mainvideo');
+  var videobox = document.querySelector('.videobox');
+    //播放时改变外层包裹的宽度，使video宽度增加，
+  //相应高度也增加了,播放器控件被挤下去，配合overflow：hidden
+  //控件看不见也触摸不到了
+  document.addEventListener("WeixinJSBridgeReady", function (){ 
+    video.play();
+    video.pause();
+}, false)
+  video.addEventListener('timeupdate',function (){
+    //当视频的currentTime大于0.1时表示黑屏时间已过，已有视频画面，可以移除浮层（.pagestart的div元素）
+    if ( !video.isPlayed && this.currentTime>0.1 ){
+        $('.pagestart').fadeOut(500);
+        video.isPlayed = !0;
+    }
+})
+  var setVideoStyle = function (){
+    videobox.style.width = '120%';
+    videobox.style.left = '-10%';
+    video.style.width = '100%';
+  }
+  video.addEventListener("ended", function() 
+{
+    $('.videobox').fadeOut();
+	$('.w-three').fadeIn();
+	video.style.width = '1%';
+});
+
+$('#w-box').click(function(){
+ setVideoStyle();
+$('.loading-ye').css('display','none');
+
+video.play();
+setVideoStyle();
+
+})
+$('#tiao-five').on('click',function(){
+    $('.w-three').fadeOut();
+    setTimeout(function(){$('.Door').attr('style','');},500);
+    setTimeout(function(){$('.Door').fadeOut(200)},1450);
+})
+
+</script>
+</body>
+<script src="js/index.js"></script>
+</html>
